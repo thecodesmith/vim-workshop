@@ -9,9 +9,9 @@ Vim is a modal text editor. Learn each mode and take advantage of it.
 * Insert mode
 * Visual mode
 
-i      Enter insert mode
-v      Enter visual mode
-<Esc>  Enter command mode
+    i      Enter insert mode
+    v      Enter visual mode
+    <Esc>  Enter command mode
 
 
 ## Use `<NOP>` mappings to break bad habits
@@ -31,124 +31,126 @@ Don't use the cursor keys! Break the habit:
 
 ### Simple movement
 
-h
-j
-k
-l
+    h
+    j
+    k
+    l
 
 Holding down j is a Vim anti-pattern.
 Break that habit too. Use word-wise motions instead.
 
 ### Word-wise
 
-w, W
-b, B
-e, E
-0
-$
-I
-A
-%
-]}
-[{
+    w, W
+    b, B
+    e, E
+    0
+    $
+    I
+    A
+    %
+    ]}
+    [{
 
 ### File-wise
 
-gg
-G
-}
-{
+    gg
+    G
+    }
+    {
 
 ### Screen-wise
 
-H
-M
-L
+    H
+    M
+    L
 
-zb
-zt
-zz
+    zb
+    zt
+    zz
 
 ### Using [count]
 
 Apply it to (almost) any command.
-Examples: 10j, 5fe
+
+    Examples: 10j, 5fe
 
 
 ## Editing
 
-i for Insert Mode
+    i for Insert Mode
 
-d
-c
-x
-y
-p
-r
-.
+    d
+    c
+    x
+    y
+    p
+    r
+    .
 
-dd
-yy
+    dd
+    yy
 
-o, O
+    o, O
 
 
 ## Visual Block
 
-v
+    v
 
 
 ## Text Objects
 
 Learn these!
 
-i[obj]
-a[obj]
+    i[obj]
+    a[obj]
 
 Objects:
 
-w  word
-p  paragraph
-'  single-quoted string
-"  quoted string
-`  backtick
-<  angle brackets
-(
-{
-[
+    w  word
+    p  paragraph
+    '  single-quoted string
+    "  quoted string
+    `  backtick
+    <  angle brackets
+    (
+    {
+    [
 
 Examples:
 
-iw
-i(
-i{
+    iw
+    i(
+    i{
 
 
 ## Undo and Redo
 
-u  undo
-<ctrl-r>  redo
+    u  undo
+    <ctrl-r>  redo
 
 
 ## Search and Replace
 
-f, F  find
-t, T  'til
+    f, F  find
+    t, T  'til
+
 Use with [count]
 
-*  search word under cursor
-/  search
-?  search up
-n  move to next match
-N  move to previous match
+    *  search word under cursor
+    /  search
+    ?  search up
+    n  move to next match
+    N  move to previous match
 
-:%s/old/new/gc  find/replace
+    :%s/old/new/gc  find/replace
 
 
 ## External Commands
 
 
-:!command
+    :!command
 
 
 ## Completion
@@ -161,43 +163,46 @@ Ctrl-p in Insert Mode
 Set marks to quickly jump between locations in a document or between documents
 
 Set mark:
-m{a-zA-Z}
+
+    m{a-zA-Z}
 
 Jump to mark:
-'{char}  first non-blank character on marked line
-`{char}  exact position where mark was set
+
+    '{char}  first non-blank character on marked line
+    `{char}  exact position where mark was set
 
 View marks:
-:marks
+
+    :marks
 
 
 ## Tabs, Buffers, Windows
 
 Don't use tabs. Use buffers instead.
 
-:e file    edit file
-:sp, :vsp  open in split
-:buffers   view buffers
-:b{N}      switch to buffer N
-:sp N
+    :e file    edit file
+    :sp, :vsp  open in split
+    :buffers   view buffers
+    :b{N}      switch to buffer N
+    :sp N
 
-:w   write file to disk
-:q   quit
-:q!  quit, discarding changes
-:qa  quit all buffers
-:wq  write and quit
+    :w   write file to disk
+    :q   quit
+    :q!  quit, discarding changes
+    :qa  quit all buffers
+    :wq  write and quit
 
-Ctrl-W {h, j, k, l}  move between windows
+    Ctrl-W {h, j, k, l}  move between windows
 
 
 ## Macros
 
 Replay single commands using `.`. For more than one command, use macros.
 
-q{0-9a-zA-Z}  start recording a macro to specified macro buffer
-qq  simplest way to record a macro
-@q  replay macro in that macro buffer
-@@  replay last played macro
+    q{0-9a-zA-Z}  start recording a macro to specified macro buffer
+    qq  simplest way to record a macro
+    @q  replay macro in that macro buffer
+    @@  replay last played macro
 
 
 ## Vimrc and Plugins
@@ -207,15 +212,21 @@ Vundle plugin manager
 
 ### Some useful plugins
 
-Ctrl-P
-Tabularize
-Commentary
-Surround
-NerdTree
-Rooter
-Tmux Navigator
+Absolutely critical:
 
-Language support plugins:
-groovy
-yaml
-go
+* Ctrl-P
+
+Nice to have:
+
+* Tabularize
+* Commentary
+* Surround
+* NerdTree
+* Rooter
+* Tmux Navigator
+
+Language support plugins for languages with limited built-in support:
+
+* groovy
+* yaml
+* go
